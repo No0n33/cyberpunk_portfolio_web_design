@@ -2,10 +2,45 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Lalezar", cursive;
+  font-family: "Chakra Petch", sans-serif;
+  font-style: italic;
   color: white; }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: cover; }
+  body .kv {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 100px 0 200px 0; }
+    body .kv .kv_img {
+      position: absolute; }
+    body .kv .logo {
+      position: relative; }
+  body .divider {
+    padding: 50px 0; }
+  body .description {
+    display: flexbox;
+    text-align: center;
+    padding: 150px 0; }
+    body .description h2 {
+      font-size: 100px;
+      padding-bottom: 50px; }
+    body .description p {
+      padding: 0 400px 50px 400px; }
+  body .events {
+    display: flex;
+    justify-content: space-between; }
+    body .events .left {
+      padding-left: 100px; }
+    body .events .right {
+      position: relative;
+      text-align: center;
+      margin: 0 400px; }
+      body .events .right h3 {
+        font-size: 35px;
+        padding-bottom: 50px; }
