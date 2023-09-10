@@ -45,19 +45,27 @@ body {
 
   .events {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     .left {
       padding-left: 100px;
+      background-image: url("../img/frame.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 70px;
     }
     .right {
       position: relative;
       text-align: center;
-      margin: 0 400px;
-      h3 {
-        font-size: 35px;
-        padding-bottom: 50px;
+      margin: 0 200px;
+      .right_text {
+        position: absolute;
+        h3 {
+          font-size: 60px;
+          padding-bottom: 20px;
+        }
       }
       img {
+        padding: 160px 0 0 100px;
       }
     }
   }
