@@ -52,3 +52,20 @@ body {
           padding-bottom: 20px; }
       body .events .right img {
         padding: 160px 0 0 100px; }
+  body .localizations h2 {
+    font-size: 100px;
+    text-align: center; }
+  body .localizations .slider {
+    display: grid;
+    transition: all 0.2s ease-out; }
+    body .localizations .slider .slider-track {
+      display: flex;
+      width: calc(250px * 10); }
+      body .localizations .slider .slider-track .slide {
+        height: 200px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        padding: 15px; }
+        body .localizations .slider .slider-track .slide img {
+          width: 100%; }

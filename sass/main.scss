@@ -69,4 +69,37 @@ body {
       }
     }
   }
+  .localizations {
+    h2 {
+      font-size: 100px;
+      text-align: center;
+    }
+    .slider {
+      display: grid;
+      transition: all 0.2s ease-out;
+      // @keyframes move_animation {
+      //   0% {
+      //     transform: translateX(0);
+      //   }
+      //   100% {
+      //     transform: translateX(calc(-250px * 9));
+      //   }
+      // }
+      .slider-track {
+        display: flex;
+        width: calc(250px * 10);
+        // animation: move_animation 40s linear infinite;
+        .slide {
+          height: 200px;
+          width: 300px;
+          display: flex;
+          align-items: center;
+          padding: 15px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
