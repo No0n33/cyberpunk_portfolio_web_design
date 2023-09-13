@@ -188,11 +188,16 @@ body {
         padding-bottom: 10px;
         color: #e21d74; }
       body .price_section .price_box button {
-        color: #000000;
+        color: #e21d74;
         background-color: #f8f150;
         border: none;
         align-items: center;
         justify-content: center;
-        border-radius: 40px;
+        border-radius: 30px;
         font-size: 36px;
-        width: 200px; }
+        width: 150px;
+        height: 80px;
+        margin-top: 20px; }
+      body .price_section .price_box button:hover {
+        background-color: #555;
+        color: aliceblue; }
