@@ -13,177 +13,474 @@ body {
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+
   .kv {
     display: flex;
     justify-content: center;
     position: relative;
     padding: 100px 0 200px 0;
+    ////////////////////////////////
+    h2 {
+      margin: 0;
+      color: #f8f150;
+      span {
+        color: #f8f150;
+      }
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .hero {
+      font-size: clamp(40px, 10vw, 100px);
+      line-height: 1;
+      display: inline-block;
+      color: #fff;
+      z-index: 2;
+      letter-spacing: 10px;
+
+      /* Bright things in dark environments usually cast that light, giving off a glow */
+      filter: drop-shadow(0 1px 3px);
+    }
+
+    .layers {
+      position: relative;
+    }
+
+    .layers::before,
+    .layers::after {
+      content: attr(data-text);
+      position: absolute;
+      width: 110%;
+      z-index: -1;
+    }
+
+    .layers::before {
+      top: 10px;
+      left: 15px;
+      color: #e0287d;
+    }
+
+    .layers::after {
+      top: 5px;
+      left: -10px;
+      color: #1bc7fb;
+    }
+
+    .paths {
+      animation: paths 5s step-end infinite;
+    }
+
+    @keyframes paths {
+      0% {
+        clip-path: polygon(
+          0% 63%,
+          43% 63%,
+          43% 28%,
+          87% 28%,
+          87% 6%,
+          60% 6%,
+          60% 92%,
+          88% 92%,
+          88% 45%,
+          1% 45%,
+          1% 72%,
+          65% 72%,
+          65% 99%,
+          97% 99%,
+          97% 15%,
+          47% 15%,
+          47% 26%,
+          1% 26%,
+          1% 90%,
+          35% 90%,
+          35% 0%,
+          86% 0%,
+          86% 8%,
+          52% 8%,
+          52% 41%,
+          76% 41%,
+          76% 56%,
+          60% 56%,
+          60% 96%,
+          45% 96%,
+          45% 1%,
+          82% 1%,
+          82% 74%,
+          48% 74%,
+          48% 65%,
+          94% 65%,
+          94% 16%,
+          1% 16%,
+          1% 20%,
+          95% 20%,
+          95% 58%,
+          57% 58%,
+          57% 45%,
+          95% 45%,
+          95% 58%,
+          1% 58%,
+          1% 50%,
+          6% 50%,
+          6% 41%,
+          41% 41%,
+          41% 1%
+        );
+      }
+
+      5% {
+        clip-path: polygon(
+          0% 47%,
+          39% 47%,
+          39% 94%,
+          17% 94%,
+          17% 47%,
+          2% 47%,
+          2% 71%,
+          53% 71%,
+          53% 55%,
+          58% 55%,
+          58% 28%,
+          34% 28%,
+          34% 17%,
+          3% 17%,
+          3% 70%,
+          87% 70%,
+          87% 79%,
+          51% 79%,
+          51% 99%,
+          42% 99%,
+          42% 49%,
+          63% 49%,
+          63% 44%,
+          35% 44%,
+          35% 41%,
+          95% 41%,
+          95% 80%,
+          8% 80%,
+          8% 58%,
+          59% 58%,
+          59% 91%,
+          29% 91%,
+          29% 55%,
+          41% 55%,
+          41% 26%,
+          11% 26%,
+          11% 41%,
+          5% 41%,
+          5% 42%,
+          9% 42%,
+          9% 56%,
+          90% 56%,
+          90% 53%,
+          92% 53%,
+          92% 94%,
+          82% 94%,
+          82% 49%,
+          46% 49%,
+          46% 19%,
+          69% 19%,
+          69% 4%,
+          9% 4%,
+          9% 60%,
+          58% 60%,
+          58% 75%,
+          75% 75%,
+          75% 82%
+        );
+      }
+
+      30% {
+        clip-path: polygon(
+          0% 8%,
+          93% 8%,
+          93% 44%,
+          86% 44%,
+          86% 75%,
+          64% 75%,
+          64% 72%,
+          22% 72%,
+          22% 75%,
+          98% 75%,
+          98% 19%,
+          59% 19%,
+          59% 49%,
+          56% 49%,
+          56% 88%,
+          17% 88%,
+          17% 61%,
+          43% 61%,
+          43% 40%,
+          51% 40%,
+          51% 93%,
+          77% 93%,
+          77% 52%,
+          76% 52%,
+          76% 40%,
+          71% 40%,
+          71% 47%,
+          15% 47%,
+          15% 35%,
+          48% 35%,
+          48% 67%,
+          40% 67%,
+          40% 67%
+        );
+      }
+
+      45% {
+        clip-path: polygon(
+          0% 36%,
+          97% 36%,
+          97% 68%,
+          28% 68%,
+          28% 69%,
+          82% 69%,
+          82% 67%,
+          77% 67%,
+          77% 1%,
+          51% 1%,
+          51% 85%,
+          89% 85%,
+          89% 48%,
+          73% 48%,
+          73% 40%,
+          33% 40%,
+          33% 59%,
+          67% 59%,
+          67% 79%,
+          65% 79%,
+          65% 2%,
+          86% 2%,
+          86% 63%,
+          78% 63%,
+          78% 11%,
+          62% 11%
+        );
+      }
+
+      76% {
+        clip-path: polygon(
+          0% 81%,
+          62% 81%,
+          62% 6%,
+          45% 6%,
+          45% 28%,
+          37% 28%,
+          37% 45%,
+          31% 45%,
+          31% 49%,
+          91% 49%,
+          91% 32%,
+          19% 32%,
+          19% 20%,
+          78% 20%,
+          78% 46%,
+          51% 46%,
+          51% 39%,
+          80% 39%,
+          80% 60%,
+          24% 60%,
+          24% 36%,
+          32% 36%,
+          32% 37%,
+          77% 37%,
+          77% 80%,
+          60% 80%,
+          60% 25%,
+          41% 25%,
+          41% 49%,
+          10% 49%,
+          10% 21%,
+          30% 21%,
+          30% 11%,
+          91% 11%,
+          91% 44%,
+          10% 44%,
+          10% 62%,
+          44% 62%,
+          44% 68%,
+          88% 68%,
+          88% 24%,
+          66% 24%
+        );
+      }
+
+      90% {
+        clip-path: polygon(
+          0% 82%,
+          86% 82%,
+          86% 25%,
+          8% 25%,
+          8% 64%,
+          38% 64%,
+          38% 33%,
+          76% 33%,
+          76% 70%,
+          61% 70%,
+          61% 22%,
+          91% 22%,
+          91% 72%
+        );
+      }
+
+      1%,
+      7%,
+      33%,
+      47%,
+      78%,
+      93% {
+        clip-path: none;
+      }
+    }
+
+    .movement {
+      /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
+      position: relative;
+      animation: movement 8s step-end infinite;
+    }
+
+    @keyframes movement {
+      0% {
+        top: 0px;
+        left: -20px;
+      }
+
+      15% {
+        top: 10px;
+        left: 10px;
+      }
+
+      60% {
+        top: 5px;
+        left: -10px;
+      }
+
+      75% {
+        top: -5px;
+        left: 20px;
+      }
+
+      100% {
+        top: 10px;
+        left: 5px;
+      }
+    }
+
+    .opacity {
+      animation: opacity 5s step-end infinite;
+    }
+
+    @keyframes opacity {
+      0% {
+        opacity: 0.1;
+      }
+
+      5% {
+        opacity: 0.7;
+      }
+
+      30% {
+        opacity: 0.4;
+      }
+
+      45% {
+        opacity: 0.6;
+      }
+
+      76% {
+        opacity: 0.4;
+      }
+
+      90% {
+        opacity: 0.8;
+      }
+
+      1%,
+      7%,
+      33%,
+      47%,
+      78%,
+      93% {
+        opacity: 0;
+      }
+    }
+
+    .font {
+      animation: font 7s step-end infinite;
+    }
+
+    @keyframes font {
+      0% {
+        font-weight: 100;
+        color: #e0287d;
+        filter: blur(3px);
+      }
+
+      20% {
+        font-weight: 500;
+        color: #fff;
+        filter: blur(0);
+      }
+
+      50% {
+        font-weight: 300;
+        color: #1bc7fb;
+        filter: blur(2px);
+      }
+
+      60% {
+        font-weight: 700;
+        color: #fff;
+        filter: blur(0);
+      }
+
+      90% {
+        font-weight: 500;
+        color: #e0287d;
+        filter: blur(6px);
+      }
+    }
+
+    .glitch span {
+      animation: paths 5s step-end infinite;
+    }
+
+    .glitch::before {
+      animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+        font 8s step-end infinite, movement 10s step-end infinite;
+    }
+
+    .glitch::after {
+      animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+        font 7s step-end infinite, movement 8s step-end infinite;
+    }
+
+    .hero-container {
+      position: absolute;
+      padding: 200px 0;
+      text-align: center;
+    }
+
+    .environment {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.5;
+      filter: blur(5px);
+      background: url(https://images.unsplash.com/photo-1602136773736-34d445b989cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80)
+        center no-repeat;
+      background-size: cover;
+    }
+    ////////////////////////////////
     .kv_img {
       position: relative;
     }
     .logo {
       position: relative;
-    }
-    h1 {
-      color: #fefe33;
-      position: absolute;
-      // font-weight: 900;
-      font-size: 150px;
-      letter-spacing: -1px;
-      padding: 2rem;
-      &:before,
-      &:after {
-        position: absolute;
-        content: attr(data-text);
-        padding: 2rem;
-        top: 0;
-        left: 0;
-        color: #fefe33;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      &:before {
-        left: 3px;
-        text-shadow: -3px 2px #87cefa;
-        animation: glitch-1 3s ease-in reverse infinite;
-      }
-
-      &:after {
-        left: -3px;
-        text-shadow: -5px 2px #e21d74;
-        animation: glitch-2 3s ease-in-out reverse infinite;
-      }
-      @keyframes glitch-1 {
-        0% {
-          clip: rect(192px, auto, 181px, 30px);
-        }
-        5% {
-          clip: rect(67px, auto, 124px, 30px);
-        }
-        10% {
-          clip: rect(40px, auto, 96px, 30px);
-        }
-        15% {
-          clip: rect(87px, auto, 62px, 30px);
-        }
-        20% {
-          clip: rect(137px, auto, 81px, 30px);
-        }
-        25% {
-          clip: rect(34px, auto, 14px, 30px);
-        }
-        30% {
-          clip: rect(163px, auto, 74px, 30px);
-        }
-        35% {
-          clip: rect(96px, auto, 117px, 30px);
-        }
-        40% {
-          clip: rect(59px, auto, 150px, 30px);
-        }
-        45% {
-          clip: rect(29px, auto, 114px, 30px);
-        }
-        50% {
-          clip: rect(22px, auto, 67px, 30px);
-        }
-        55% {
-          clip: rect(67px, auto, 92px, 30px);
-        }
-        60% {
-          clip: rect(10px, auto, 137px, 30px);
-        }
-        65% {
-          clip: rect(78px, auto, 185px, 30px);
-        }
-        70% {
-          clip: rect(145px, auto, 63px, 30px);
-        }
-        75% {
-          clip: rect(45px, auto, 15px, 30px);
-        }
-        80% {
-          clip: rect(86px, auto, 79px, 30px);
-        }
-        85% {
-          clip: rect(133px, auto, 143px, 30px);
-        }
-        90% {
-          clip: rect(176px, auto, 128px, 30px);
-        }
-        95% {
-          clip: rect(98px, auto, 103px, 30px);
-        }
-        100% {
-          clip: rect(14px, auto, 190px, 30px);
-        }
-      }
-
-      @keyframes glitch-2 {
-        0% {
-          clip: rect(129px, auto, 36px, 30px);
-        }
-        5% {
-          clip: rect(36px, auto, 4px, 30px);
-        }
-        10% {
-          clip: rect(85px, auto, 66px, 30px);
-        }
-        15% {
-          clip: rect(91px, auto, 91px, 30px);
-        }
-        20% {
-          clip: rect(148px, auto, 138px, 30px);
-        }
-        25% {
-          clip: rect(38px, auto, 182px, 30px);
-        }
-        30% {
-          clip: rect(69px, auto, 94px, 30px);
-        }
-        35% {
-          clip: rect(98px, auto, 21px, 30px);
-        }
-        40% {
-          clip: rect(146px, auto, 74px, 30px);
-        }
-        45% {
-          clip: rect(134px, auto, 143px, 30px);
-        }
-        50% {
-          clip: rect(102px, auto, 190px, 30px);
-        }
-        55% {
-          clip: rect(119px, auto, 144px, 30px);
-        }
-        60% {
-          clip: rect(106px, auto, 99px, 30px);
-        }
-        65% {
-          clip: rect(141px, auto, 54px, 30px);
-        }
-        70% {
-          clip: rect(20px, auto, 28px, 30px);
-        }
-        75% {
-          clip: rect(133px, auto, 79px, 30px);
-        }
-        80% {
-          clip: rect(78px, auto, 12px, 30px);
-        }
-        85% {
-          clip: rect(35px, auto, 39px, 30px);
-        }
-        90% {
-          clip: rect(67px, auto, 90px, 30px);
-        }
-        95% {
-          clip: rect(71px, auto, 153px, 30px);
-        }
-        100% {
-          clip: rect(83px, auto, 90px, 30px);
-        }
-      }
     }
   }
   .divider {
@@ -250,7 +547,7 @@ body {
       position: absolute;
       z-index: -1;
     }
-    .right {
+    .cell-right {
     }
     .gallery {
       width: 100%;
@@ -384,6 +681,19 @@ body {
           }
         }
       }
+    }
+  }
+  .cars {
+    h2 {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      font-size: 100px;
+      padding-bottom: 50px;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
   .price_section {
