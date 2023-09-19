@@ -21,7 +21,7 @@ document.getElementById("container3D").appendChild(renderer.domElement);
 
 //create three.js scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xa0a0a0);
+// scene.background = new THREE.Color(0xa0a0a0);
 //create a new camera with positions and angels
 const camera = new THREE.PerspectiveCamera(
   45,
@@ -39,9 +39,9 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; //making camera move smoother
 controls.enablePan = false; //turning sidewats movement of camera
 controls.minDistance = 235; //min distane which camera can be close to object
-// controls.maxDistance = 20; //max distane from camera to object
-// controls.minPolarAngle = 0.5; //min angle to limit the down movement of camera
-// controls.maxPolarAngle = 1.5; // max angle to limit the up movement of camera
+controls.maxDistance = 600; //max distane from camera to object
+controls.minPolarAngle = 0.5; //min angle to limit the down movement of camera
+controls.maxPolarAngle = 1.5; // max angle to limit the up movement of camera
 controls.autoRotate = false; //turning off auto rotation of camera
 controls.targer = new THREE.Vector3(0, 1, 0); //points in which camera is looking
 //updateing all set ups above
@@ -53,14 +53,14 @@ topLight.position.set(1500, 1500, 500); //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
-//INstantiate a lodaer for the .gltf file
+//Instantiate a lodaer for the .gltf file
 const loader = new GLTFLoader().setPath("3d_render/cyberpunk_car_gltf/");
 //load the file
 loader.load("scene.gltf", (gltf) => {
   //If the file is loaded add it to the scene
   let object = gltf.scene;
   object.position.set(0, 0, 0);
-  object.scale.set(0.75, 0.75, 0.75);
+  object.scale.set(0.85, 0.85, 0.85);
   scene.add(object);
 });
 

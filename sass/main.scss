@@ -15,10 +15,10 @@ body {
   background-size: cover;
 
   .kv {
+    background-size: cover;
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 100px 0 200px 0;
     ////////////////////////////////
     h2 {
       margin: 0;
@@ -484,35 +484,74 @@ body {
     }
   }
   .divider {
-    padding: 50px 0;
+    padding: 20px 0;
+    width: 85%;
+    align-items: center;
+    margin: auto;
   }
 
   .about {
     text-align: center;
-    padding: 150px 0;
-
+    padding: 50px 0;
+    margin: 0 100px;
+    background-color: rgba(0, 0, 0, 0.6);
     h2 {
       font-size: 100px;
       padding-bottom: 50px;
+      background: linear-gradient(
+        221deg,
+        #f8f150 33.17%,
+        #eea359 51.4%,
+        #e86765 64.04%,
+        #e21d74 79.84%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .description {
       padding: 0 400px 50px 400px;
+      background: linear-gradient(
+        221deg,
+        #f8f150 33.17%,
+        #eea359 51.4%,
+        #e86765 64.04%,
+        #e21d74 79.84%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      background: linear-gradient(
+        221deg,
+        #f8f150 33.17%,
+        #eea359 51.4%,
+        #e86765 64.04%,
+        #e21d74 79.84%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       .sumup {
-        width: 900px;
+        width: 600px;
         padding: 20px 0;
         h3 {
           font-size: 30px;
           margin-bottom: 15px;
         }
+        img {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
   }
 
-  .events {
+  .mechanic {
     display: flex;
     justify-content: center;
     .left {
@@ -521,15 +560,29 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       padding: 70px;
+      img {
+        scale: 1.2;
+      }
     }
     .right {
       position: relative;
       text-align: center;
-      margin: 0 200px;
+      margin-left: 200px;
+
       .right_text {
         position: absolute;
+        background: linear-gradient(
+          221deg,
+          #f8f150 33.17%,
+          #eea359 51.4%,
+          #e86765 64.04%,
+          #e21d74 79.84%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         h3 {
-          font-size: 60px;
+          font-size: 40px;
           padding-bottom: 20px;
         }
       }
@@ -542,6 +595,16 @@ body {
     h2 {
       font-size: 100px;
       text-align: center;
+      background: linear-gradient(
+        221deg,
+        #f8f150 33.17%,
+        #eea359 51.4%,
+        #e86765 64.04%,
+        #e21d74 79.84%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .cell {
       position: absolute;
@@ -684,16 +747,65 @@ body {
     }
   }
   .cars {
+    position: relative;
+
+    img[src$="corner_up.png"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0 150px;
+    }
+    img[src$="corner_down.png"] {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0 150px;
+    }
     h2 {
       display: flex;
       justify-content: center;
       position: relative;
       font-size: 100px;
       padding-bottom: 50px;
+      background: linear-gradient(
+        221deg,
+        #f8f150 33.17%,
+        #eea359 51.4%,
+        #e86765 64.04%,
+        #e21d74 79.84%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      .car_description {
+        margin-left: 350px;
+        background-color: rgba(2, 215, 242, 0.7);
+        height: 250px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 3%;
+        .textbox {
+          background: linear-gradient(
+            221deg,
+            #f8f150 33.17%,
+            #eea359 51.4%,
+            #e86765 64.04%,
+            #e21d74 79.84%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-color: rgba(0, 0, 0, 0.6);
+          h3 {
+            font-size: 40px;
+            margin-bottom: 30px;
+          }
+        }
+      }
     }
   }
   .price_section {

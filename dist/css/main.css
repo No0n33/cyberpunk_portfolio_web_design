@@ -13,10 +13,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
   body .kv {
+    background-size: cover;
     display: flex;
     justify-content: center;
-    position: relative;
-    padding: 100px 0 200px 0; }
+    position: relative; }
     body .kv h2 {
       margin: 0;
       color: #f8f150; }
@@ -165,47 +165,78 @@ body {
     body .kv .logo {
       position: relative; }
   body .divider {
-    padding: 50px 0; }
+    padding: 20px 0;
+    width: 85%;
+    align-items: center;
+    margin: auto; }
   body .about {
     text-align: center;
-    padding: 150px 0; }
+    padding: 50px 0;
+    margin: 0 100px;
+    background-color: rgba(0, 0, 0, 0.6); }
     body .about h2 {
       font-size: 100px;
-      padding-bottom: 50px; }
+      padding-bottom: 50px;
+      background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
     body .about .description {
-      padding: 0 400px 50px 400px; }
+      padding: 0 400px 50px 400px;
+      background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
     body .about .content {
       display: grid;
-      grid-template-columns: 1fr 1fr; }
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
       body .about .content .sumup {
-        width: 900px;
+        width: 600px;
         padding: 20px 0; }
         body .about .content .sumup h3 {
           font-size: 30px;
           margin-bottom: 15px; }
-  body .events {
+        body .about .content .sumup img {
+          width: 100px;
+          height: 100px; }
+  body .mechanic {
     display: flex;
     justify-content: center; }
-    body .events .left {
+    body .mechanic .left {
       padding-left: 100px;
       background-image: url("../img/frame.png");
       background-repeat: no-repeat;
       background-size: cover;
       padding: 70px; }
-    body .events .right {
+      body .mechanic .left img {
+        scale: 1.2; }
+    body .mechanic .right {
       position: relative;
       text-align: center;
-      margin: 0 200px; }
-      body .events .right .right_text {
-        position: absolute; }
-        body .events .right .right_text h3 {
-          font-size: 60px;
+      margin-left: 200px; }
+      body .mechanic .right .right_text {
+        position: absolute;
+        background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+        body .mechanic .right .right_text h3 {
+          font-size: 40px;
           padding-bottom: 20px; }
-      body .events .right img {
+      body .mechanic .right img {
         padding: 160px 0 0 100px; }
   body .localizations h2 {
     font-size: 100px;
-    text-align: center; }
+    text-align: center;
+    background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   body .localizations .cell {
     position: absolute;
     z-index: -1; }
@@ -320,15 +351,47 @@ body {
         width: 10px; }
         body .localizations .gallery .gallery-nav li .gallery-item-selected {
           background: #555; }
-  body .cars h2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    font-size: 100px;
-    padding-bottom: 50px; }
-  body .cars .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
+  body .cars {
+    position: relative; }
+    body .cars img[src$="corner_up.png"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0 150px; }
+    body .cars img[src$="corner_down.png"] {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0 150px; }
+    body .cars h2 {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      font-size: 100px;
+      padding-bottom: 50px;
+      background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    body .cars .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      body .cars .content .car_description {
+        margin-left: 350px;
+        background-color: rgba(2, 215, 242, 0.7);
+        height: 250px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 3%; }
+        body .cars .content .car_description .textbox {
+          background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-color: rgba(0, 0, 0, 0.6); }
+          body .cars .content .car_description .textbox h3 {
+            font-size: 40px;
+            margin-bottom: 30px; }
   body .price_section {
     display: flex;
     justify-content: center;
