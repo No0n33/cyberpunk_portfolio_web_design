@@ -31,14 +31,14 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 //Set how far the camera will be from 3d model
-camera.position.set(2, 50, -100);
+camera.position.set(-300, 190, -310);
 camera.lookAt(0, 0, 0);
 
 ////////////////~~CONTROL/MOVEMENT~~////////////////
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; //making camera move smoother
 controls.enablePan = false; //turning sidewats movement of camera
-// controls.minDistance = 5; //min distane which camera can be close to object
+controls.minDistance = 235; //min distane which camera can be close to object
 // controls.maxDistance = 20; //max distane from camera to object
 // controls.minPolarAngle = 0.5; //min angle to limit the down movement of camera
 // controls.maxPolarAngle = 1.5; // max angle to limit the up movement of camera
@@ -48,8 +48,8 @@ controls.targer = new THREE.Vector3(0, 1, 0); //points in which camera is lookin
 controls.update();
 
 //Add lights to the scene
-const topLight = new THREE.DirectionalLight(0xffffff, 1); //(control, intensity)
-topLight.position.set(500, 500, 500); //top-left-ish
+const topLight = new THREE.DirectionalLight(0xffffff, 5); //(control, intensity)
+topLight.position.set(1500, 1500, 500); //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
@@ -59,9 +59,8 @@ const loader = new GLTFLoader().setPath("3d_render/cyberpunk_car_gltf/");
 loader.load("scene.gltf", (gltf) => {
   //If the file is loaded add it to the scene
   let object = gltf.scene;
-  object.position.set(-300, 1, 300);
-
-  object.scale.set(0.05, 0.05, 0.05);
+  object.position.set(0, 0, 0);
+  object.scale.set(0.75, 0.75, 0.75);
   scene.add(object);
 });
 
@@ -82,7 +81,7 @@ window.addEventListener("resize", function () {
 //start the 3d adnimation
 animate();
 
-/////////////////////////
+/////////////////////////carousel\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 const galleryContainer = document.querySelector(".gallery-container");
 const galleryControlsContainer = document.querySelector(".gallery-controls");
 const galleryControls = ["previous", "next"];
