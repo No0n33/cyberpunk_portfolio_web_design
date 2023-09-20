@@ -1,5 +1,4 @@
-// //three.js import
-
+//3d render three.js
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -63,6 +62,15 @@ loader.load("scene.gltf", (gltf) => {
   object.scale.set(0.85, 0.85, 0.85);
   scene.add(object);
 });
+
+//ground
+// const planeGeometry = new THREE.PlaneGeometry(400, 500, 10, 10);
+const planeGeometry = new THREE.CircleGeometry(220, 32);
+const planeMaterial = new THREE.MeshBasicMaterial("rgb(100%, 0%, 0%)");
+const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+plane.rotation.x = -Math.PI / 2;
+plane.position.y = 0;
+scene.add(plane);
 
 //render the scene
 function animate() {

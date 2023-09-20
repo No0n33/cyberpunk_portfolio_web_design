@@ -3,8 +3,7 @@
   padding: 0;
   border: 0;
   font-family: "Chakra Petch", sans-serif;
-  font-style: italic;
-  color: white; }
+  font-style: italic; }
 
 body {
   display: flex;
@@ -17,147 +16,6 @@ body {
     display: flex;
     justify-content: center;
     position: relative; }
-    body .kv h2 {
-      margin: 0;
-      color: #f8f150; }
-      body .kv h2 span {
-        color: #f8f150; }
-    body .kv .hero {
-      font-size: clamp(40px, 10vw, 100px);
-      line-height: 1;
-      display: inline-block;
-      color: #fff;
-      z-index: 2;
-      letter-spacing: 10px;
-      /* Bright things in dark environments usually cast that light, giving off a glow */
-      filter: drop-shadow(0 1px 3px); }
-    body .kv .layers {
-      position: relative; }
-    body .kv .layers::before,
-    body .kv .layers::after {
-      content: attr(data-text);
-      position: absolute;
-      width: 110%;
-      z-index: -1; }
-    body .kv .layers::before {
-      top: 10px;
-      left: 15px;
-      color: #e0287d; }
-    body .kv .layers::after {
-      top: 5px;
-      left: -10px;
-      color: #1bc7fb; }
-    body .kv .paths {
-      animation: paths 5s step-end infinite; }
-
-@keyframes paths {
-  0% {
-    clip-path: polygon(0% 63%, 43% 63%, 43% 28%, 87% 28%, 87% 6%, 60% 6%, 60% 92%, 88% 92%, 88% 45%, 1% 45%, 1% 72%, 65% 72%, 65% 99%, 97% 99%, 97% 15%, 47% 15%, 47% 26%, 1% 26%, 1% 90%, 35% 90%, 35% 0%, 86% 0%, 86% 8%, 52% 8%, 52% 41%, 76% 41%, 76% 56%, 60% 56%, 60% 96%, 45% 96%, 45% 1%, 82% 1%, 82% 74%, 48% 74%, 48% 65%, 94% 65%, 94% 16%, 1% 16%, 1% 20%, 95% 20%, 95% 58%, 57% 58%, 57% 45%, 95% 45%, 95% 58%, 1% 58%, 1% 50%, 6% 50%, 6% 41%, 41% 41%, 41% 1%); }
-  5% {
-    clip-path: polygon(0% 47%, 39% 47%, 39% 94%, 17% 94%, 17% 47%, 2% 47%, 2% 71%, 53% 71%, 53% 55%, 58% 55%, 58% 28%, 34% 28%, 34% 17%, 3% 17%, 3% 70%, 87% 70%, 87% 79%, 51% 79%, 51% 99%, 42% 99%, 42% 49%, 63% 49%, 63% 44%, 35% 44%, 35% 41%, 95% 41%, 95% 80%, 8% 80%, 8% 58%, 59% 58%, 59% 91%, 29% 91%, 29% 55%, 41% 55%, 41% 26%, 11% 26%, 11% 41%, 5% 41%, 5% 42%, 9% 42%, 9% 56%, 90% 56%, 90% 53%, 92% 53%, 92% 94%, 82% 94%, 82% 49%, 46% 49%, 46% 19%, 69% 19%, 69% 4%, 9% 4%, 9% 60%, 58% 60%, 58% 75%, 75% 75%, 75% 82%); }
-  30% {
-    clip-path: polygon(0% 8%, 93% 8%, 93% 44%, 86% 44%, 86% 75%, 64% 75%, 64% 72%, 22% 72%, 22% 75%, 98% 75%, 98% 19%, 59% 19%, 59% 49%, 56% 49%, 56% 88%, 17% 88%, 17% 61%, 43% 61%, 43% 40%, 51% 40%, 51% 93%, 77% 93%, 77% 52%, 76% 52%, 76% 40%, 71% 40%, 71% 47%, 15% 47%, 15% 35%, 48% 35%, 48% 67%, 40% 67%, 40% 67%); }
-  45% {
-    clip-path: polygon(0% 36%, 97% 36%, 97% 68%, 28% 68%, 28% 69%, 82% 69%, 82% 67%, 77% 67%, 77% 1%, 51% 1%, 51% 85%, 89% 85%, 89% 48%, 73% 48%, 73% 40%, 33% 40%, 33% 59%, 67% 59%, 67% 79%, 65% 79%, 65% 2%, 86% 2%, 86% 63%, 78% 63%, 78% 11%, 62% 11%); }
-  76% {
-    clip-path: polygon(0% 81%, 62% 81%, 62% 6%, 45% 6%, 45% 28%, 37% 28%, 37% 45%, 31% 45%, 31% 49%, 91% 49%, 91% 32%, 19% 32%, 19% 20%, 78% 20%, 78% 46%, 51% 46%, 51% 39%, 80% 39%, 80% 60%, 24% 60%, 24% 36%, 32% 36%, 32% 37%, 77% 37%, 77% 80%, 60% 80%, 60% 25%, 41% 25%, 41% 49%, 10% 49%, 10% 21%, 30% 21%, 30% 11%, 91% 11%, 91% 44%, 10% 44%, 10% 62%, 44% 62%, 44% 68%, 88% 68%, 88% 24%, 66% 24%); }
-  90% {
-    clip-path: polygon(0% 82%, 86% 82%, 86% 25%, 8% 25%, 8% 64%, 38% 64%, 38% 33%, 76% 33%, 76% 70%, 61% 70%, 61% 22%, 91% 22%, 91% 72%); }
-  1%,
-  7%,
-  33%,
-  47%,
-  78%,
-  93% {
-    clip-path: none; } }
-    body .kv .movement {
-      /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
-      position: relative;
-      animation: movement 8s step-end infinite; }
-
-@keyframes movement {
-  0% {
-    top: 0px;
-    left: -20px; }
-  15% {
-    top: 10px;
-    left: 10px; }
-  60% {
-    top: 5px;
-    left: -10px; }
-  75% {
-    top: -5px;
-    left: 20px; }
-  100% {
-    top: 10px;
-    left: 5px; } }
-    body .kv .opacity {
-      animation: opacity 5s step-end infinite; }
-
-@keyframes opacity {
-  0% {
-    opacity: 0.1; }
-  5% {
-    opacity: 0.7; }
-  30% {
-    opacity: 0.4; }
-  45% {
-    opacity: 0.6; }
-  76% {
-    opacity: 0.4; }
-  90% {
-    opacity: 0.8; }
-  1%,
-  7%,
-  33%,
-  47%,
-  78%,
-  93% {
-    opacity: 0; } }
-    body .kv .font {
-      animation: font 7s step-end infinite; }
-
-@keyframes font {
-  0% {
-    font-weight: 100;
-    color: #e0287d;
-    filter: blur(3px); }
-  20% {
-    font-weight: 500;
-    color: #fff;
-    filter: blur(0); }
-  50% {
-    font-weight: 300;
-    color: #1bc7fb;
-    filter: blur(2px); }
-  60% {
-    font-weight: 700;
-    color: #fff;
-    filter: blur(0); }
-  90% {
-    font-weight: 500;
-    color: #e0287d;
-    filter: blur(6px); } }
-    body .kv .glitch span {
-      animation: paths 5s step-end infinite; }
-    body .kv .glitch::before {
-      animation: paths 5s step-end infinite, opacity 5s step-end infinite, font 8s step-end infinite, movement 10s step-end infinite; }
-    body .kv .glitch::after {
-      animation: paths 5s step-end infinite, opacity 5s step-end infinite, font 7s step-end infinite, movement 8s step-end infinite; }
-    body .kv .hero-container {
-      position: absolute;
-      padding: 200px 0;
-      text-align: center; }
-    body .kv .environment {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0.5;
-      filter: blur(5px);
-      background: url(https://images.unsplash.com/photo-1602136773736-34d445b989cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80) center no-repeat;
-      background-size: cover; }
     body .kv .logo {
       position: absolute; }
     body .kv .kv_img {
@@ -355,8 +213,8 @@ body {
       body .mechanic .right .right_text {
         position: absolute;
         background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
-        background-clip: text;
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent; }
         body .mechanic .right .right_text h3 {
           font-size: 40px;
@@ -364,12 +222,31 @@ body {
       body .mechanic .right img {
         padding: 160px 0 0 100px; }
   body .localizations h2 {
-    font-size: 100px;
+    font-size: 6rem;
     text-align: center;
+    --neon-text-color: rgb(225, 0, 255);
     background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
-    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color), 0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color), 0 0 10rem var(--neon-text-color);
+    animation: texts 2s 1s ease-in infinite; }
+
+@keyframes texts {
+  0%,
+  5%,
+  10%,
+  20%,
+  28%,
+  33% {
+    opacity: 0; }
+  2%,
+  8%,
+  12%,
+  25%,
+  30%,
+  36% {
+    opacity: 1; } }
   body .localizations .cell {
     position: absolute;
     z-index: -1; }
@@ -394,17 +271,20 @@ body {
       body .localizations .gallery .gallery-container .gallery-item-1 {
         left: 10%;
         opacity: 0.4;
-        transform: translateX(-50%); }
+        transform: translateX(-50%);
+        box-shadow: 10px 5px 5px black; }
       body .localizations .gallery .gallery-container .gallery-item-2,
       body .localizations .gallery .gallery-container .gallery-item-4 {
         height: 250px;
         opacity: 0.8;
         width: 380px;
-        z-index: 1; }
+        z-index: 1;
+        box-shadow: 10px 5px 5px black; }
       body .localizations .gallery .gallery-container .gallery-item-2 {
         left: 30%;
         transform: translateX(-50%); }
       body .localizations .gallery .gallery-container .gallery-item-3 {
+        box-shadow: 10px 5px 5px black;
         height: 300px;
         opacity: 1;
         left: 50%;
@@ -417,7 +297,8 @@ body {
       body .localizations .gallery .gallery-container .gallery-item-5 {
         left: 90%;
         transform: translateX(-50%);
-        opacity: 0.4; }
+        opacity: 0.4;
+        box-shadow: 10px 5px 5px black; }
     body .localizations .gallery .gallery-controls {
       display: flex;
       justify-content: center;
@@ -503,23 +384,25 @@ body {
       font-size: 100px;
       padding-bottom: 50px;
       background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
-      background-clip: text;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent; }
     body .cars .content {
       display: grid;
       grid-template-columns: 1fr 1fr; }
       body .cars .content .car_description {
-        margin-left: 350px;
-        background-color: rgba(2, 215, 242, 0.7);
-        height: 250px;
-        padding: 20px;
+        margin-left: 22.9rem;
+        height: 16rem;
+        padding: 4rem;
         text-align: center;
-        border-radius: 3%; }
+        border-radius: 3%;
+        background-image: url("../img/card1.png");
+        background-repeat: no-repeat;
+        background-size: cover; }
         body .cars .content .car_description .textbox {
           background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
-          background-clip: text;
           -webkit-background-clip: text;
+          background-clip: text;
           -webkit-text-fill-color: transparent;
           background-color: rgba(0, 0, 0, 0.6); }
           body .cars .content .car_description .textbox h3 {
