@@ -29,18 +29,21 @@ body {
     }
   }
   .divider {
-    padding: 20px 0;
+    padding: 2rem 0;
     width: 85%;
     align-items: center;
     margin: auto;
   }
-
   .about {
     text-align: center;
-    padding: 50px 0;
-    margin: 0 100px;
+    padding: 2rem 0;
+    margin: 0 10rem;
     background-color: rgba(0, 0, 0, 0.6);
-    //
+    .zoe {
+      position: absolute;
+      height: 60rem;
+      left: 70%;
+    }
     h2 {
       margin: 0;
       color: #f8f150;
@@ -501,8 +504,8 @@ body {
         #e86765 64.04%,
         #e21d74 79.84%
       );
-      background-clip: text;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .content {
@@ -516,8 +519,8 @@ body {
         #e86765 64.04%,
         #e21d74 79.84%
       );
-      background-clip: text;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       .sumup {
         width: 600px;
@@ -616,8 +619,6 @@ body {
     .cell {
       position: absolute;
       z-index: -1;
-    }
-    .cell-right {
     }
     .gallery {
       width: 100%;
@@ -775,8 +776,8 @@ body {
       display: flex;
       justify-content: center;
       position: relative;
-      font-size: 100px;
-      padding-bottom: 50px;
+      font-size: 5rem;
+      padding-bottom: 2rem;
       background: linear-gradient(
         221deg,
         #f8f150 33.17%,
@@ -813,8 +814,8 @@ body {
           -webkit-text-fill-color: transparent;
           background-color: rgba(0, 0, 0, 0.6);
           h3 {
-            font-size: 40px;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 2rem;
           }
         }
       }
@@ -826,7 +827,7 @@ body {
     align-items: center;
     height: auto;
     position: relative;
-    margin: 0 0 50px 0;
+    margin: 0 0 5rem 0;
     img {
       // position: absolute;
       z-index: 0;
@@ -834,24 +835,24 @@ body {
     .price_box {
       position: absolute;
       z-index: 1;
-      height: 350px;
+      height: 15em;
       text-align: center;
       p {
-        font-size: 85px;
-        padding-bottom: 10px;
+        font-size: 6rem;
+        padding-bottom: 0.5rem;
         color: #e21d74;
       }
       button,
       button::after {
-        width: 380px;
-        height: 86px;
-        font-size: 36px;
+        width: 20rem;
+        height: 5rem;
+        font-size: 2rem;
         background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
         border: 0;
         color: #fff;
-        letter-spacing: 3px;
-        line-height: 88px;
-        box-shadow: 6px 0px 0px #00e6f6;
+        letter-spacing: 0.2rem;
+        line-height: 5rem;
+        box-shadow: 1rem 0rem 0rem #00e6f6;
         outline: transparent;
         position: relative;
       }

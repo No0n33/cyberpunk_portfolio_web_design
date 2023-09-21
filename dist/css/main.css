@@ -24,15 +24,19 @@ body {
       width: 100%;
       z-index: -1; }
   body .divider {
-    padding: 20px 0;
+    padding: 2rem 0;
     width: 85%;
     align-items: center;
     margin: auto; }
   body .about {
     text-align: center;
-    padding: 50px 0;
-    margin: 0 100px;
+    padding: 2rem 0;
+    margin: 0 10rem;
     background-color: rgba(0, 0, 0, 0.6); }
+    body .about .zoe {
+      position: absolute;
+      height: 60rem;
+      left: 70%; }
     body .about h2 {
       margin: 0;
       color: #f8f150; }
@@ -175,16 +179,16 @@ body {
     body .about .description {
       padding: 0 400px 50px 400px;
       background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
-      background-clip: text;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent; }
     body .about .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
       background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
-      background-clip: text;
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent; }
       body .about .content .sumup {
         width: 600px;
@@ -381,8 +385,8 @@ body {
       display: flex;
       justify-content: center;
       position: relative;
-      font-size: 100px;
-      padding-bottom: 50px;
+      font-size: 5rem;
+      padding-bottom: 2rem;
       background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
       -webkit-background-clip: text;
       background-clip: text;
@@ -406,37 +410,37 @@ body {
           -webkit-text-fill-color: transparent;
           background-color: rgba(0, 0, 0, 0.6); }
           body .cars .content .car_description .textbox h3 {
-            font-size: 40px;
-            margin-bottom: 30px; }
+            font-size: 2rem;
+            margin-bottom: 2rem; }
   body .price_section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     position: relative;
-    margin: 0 0 50px 0; }
+    margin: 0 0 5rem 0; }
     body .price_section img {
       z-index: 0; }
     body .price_section .price_box {
       position: absolute;
       z-index: 1;
-      height: 350px;
+      height: 15em;
       text-align: center; }
       body .price_section .price_box p {
-        font-size: 85px;
-        padding-bottom: 10px;
+        font-size: 6rem;
+        padding-bottom: 0.5rem;
         color: #e21d74; }
       body .price_section .price_box button,
       body .price_section .price_box button::after {
-        width: 380px;
-        height: 86px;
-        font-size: 36px;
+        width: 20rem;
+        height: 5rem;
+        font-size: 2rem;
         background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
         border: 0;
         color: #fff;
-        letter-spacing: 3px;
-        line-height: 88px;
-        box-shadow: 6px 0px 0px #00e6f6;
+        letter-spacing: 0.2rem;
+        line-height: 5rem;
+        box-shadow: 1rem 0rem 0rem #00e6f6;
         outline: transparent;
         position: relative; }
       body .price_section .price_box button::after {

@@ -18,6 +18,13 @@ renderer.setPixelRatio(window.devicePixelRatio);
 //add the element to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
 
+window.addEventListener("resize", function () {
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+});
 //create three.js scene
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color(0xa0a0a0);
