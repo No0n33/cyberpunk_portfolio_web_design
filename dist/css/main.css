@@ -7,6 +7,7 @@
 
 body {
   display: flex;
+  align-items: center;
   flex-direction: column;
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
@@ -17,7 +18,9 @@ body {
     justify-content: center;
     position: relative; }
     body .kv .logo {
-      position: absolute; }
+      position: absolute;
+      max-width: 100%;
+      height: auto; }
     body .kv .kv_img {
       position: relative;
       height: 100%;
@@ -30,25 +33,20 @@ body {
     margin: auto; }
   body .about {
     text-align: center;
-    padding: 2rem 0;
-    margin: 0 10rem;
+    padding: 2rem 0 1rem 0;
     background-color: rgba(0, 0, 0, 0.6); }
-    body .about .zoe {
-      position: absolute;
-      height: 60rem;
-      left: 70%; }
     body .about h2 {
       margin: 0;
       color: #f8f150; }
       body .about h2 span {
         color: #f8f150; }
     body .about .hero {
-      font-size: clamp(40px, 10vw, 100px);
+      font-size: clamp(2em, 10vw, 5rem);
       line-height: 1;
       display: inline-block;
       color: #fff;
       z-index: 2;
-      letter-spacing: 10px;
+      letter-spacing: 1rem;
       /* Bright things in dark environments usually cast that light, giving off a glow */
       filter: drop-shadow(0 1px 3px); }
     body .about .layers {
@@ -165,7 +163,7 @@ body {
     body .about .glitch::after {
       animation: paths 5s step-end infinite, opacity 5s step-end infinite, font 7s step-end infinite, movement 8s step-end infinite; }
     body .about .hero-container {
-      padding: 70px 0;
+      padding: 5rem 0;
       text-align: center; }
     body .about .environment {
       top: 0;
@@ -177,11 +175,12 @@ body {
       background: url(https://images.unsplash.com/photo-1602136773736-34d445b989cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80) center no-repeat;
       background-size: cover; }
     body .about .description {
-      padding: 0 400px 50px 400px;
+      padding: 5rem;
       background: linear-gradient(221deg, #f8f150 33.17%, #eea359 51.4%, #e86765 64.04%, #e21d74 79.84%);
       -webkit-background-clip: text;
       background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      overflow-wrap: break-word; }
     body .about .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -209,7 +208,7 @@ body {
       background-size: cover;
       padding: 70px; }
       body .mechanic .left img {
-        scale: 1.2; }
+        transform: scale(1.2); }
     body .mechanic .right {
       position: relative;
       text-align: center;
@@ -412,6 +411,13 @@ body {
           body .cars .content .car_description .textbox h3 {
             font-size: 2rem;
             margin-bottom: 2rem; }
+      body .cars .content #container3D {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+        body .cars .content #container3D canvas {
+          width: 100%;
+          height: 100%; }
   body .price_section {
     display: flex;
     justify-content: center;
