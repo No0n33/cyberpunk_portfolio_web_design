@@ -96,7 +96,7 @@ controls.minDistance = 235; //min distane which camera can be close to object
 controls.maxDistance = 800; //max distane from camera to object
 controls.minPolarAngle = 0.5; //min angle to limit the down movement of camera
 controls.maxPolarAngle = 1.5; // max angle to limit the up movement of camera
-controls.autoRotate = false; //turning off auto rotation of camera
+controls.autoRotate = false; //auto rotation of camera
 controls.target = new THREE.Vector3(0, -50, 0); //points in which camera is looking
 controls.update();
 
