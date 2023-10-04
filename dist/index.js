@@ -92,35 +92,48 @@ camera.lookAt(0, 0, 0);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; //making camera move smoother
 controls.enablePan = false; //turning sidewats movement of camera
-controls.minDistance = 235; //min distane which camera can be close to object
-controls.maxDistance = 800; //max distane from camera to object
+controls.minDistance = 75; //min distane which camera can be close to object
+controls.maxDistance = 400; //max distane from camera to object
 controls.minPolarAngle = 0.5; //min angle to limit the down movement of camera
 controls.maxPolarAngle = 1.5; // max angle to limit the up movement of camera
 controls.autoRotate = false; //auto rotation of camera
 controls.target = new THREE.Vector3(0, -50, 0); //points in which camera is looking
 controls.update();
 
-const topLight = new THREE.DirectionalLight(0xffffff, 5); //(control, intensity)
-topLight.position.set(1500, 1500, 500); //top-left-ish
+const topLight = new THREE.DirectionalLight(0xffffff, 3); //(control, intensity)
+topLight.position.set(1500, 1500, 1500); //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
+const topLight1 = new THREE.DirectionalLight(0xffffff, 3); //(control, intensity)
+topLight.position.set(-1500, -1500, -1500); //top-left-ish
+topLight.castShadow = true;
+scene.add(topLight1);
+
 //Instantiate a lodaer for the .gltf file
-const loader = new GLTFLoader().setPath("3d_render/cyberpunk_car_gltf/");
+// const loader = new GLTFLoader().setPath("3d_render/cyberpunk_car_gltf/");
+// loader.load("scene.gltf", (gltf) => {
+//   let object = gltf.scene;
+//   object.position.set(0, 0, 0);
+//   object.scale.set(0.85, 0.85, 0.85);
+//   scene.add(object);
+// });
+//spaceship
+const loader = new GLTFLoader().setPath("3d_render/spaceship/");
 loader.load("scene.gltf", (gltf) => {
   let object = gltf.scene;
-  object.position.set(0, 0, 0);
-  object.scale.set(0.85, 0.85, 0.85);
+  object.position.set(0, -60, 0);
+  object.scale.set(18.85, 18.85, 18.85);
   scene.add(object);
 });
 
 //ground
-const planeGeometry = new THREE.CircleGeometry(220, 32);
-const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-plane.rotation.x = -Math.PI / 2;
-plane.position.y = 0;
-scene.add(plane);
+// const planeGeometry = new THREE.CircleGeometry(220, 32);
+// const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+// const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+// plane.rotation.x = -Math.PI / 2;
+// plane.position.y = 0;
+// scene.add(plane);
 
 //render the scene
 function animate() {

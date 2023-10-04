@@ -1,0 +1,11 @@
+Model Information:
+* title:	futuristic spaceship (FREE)
+* source:	https://sketchfab.com/3d-models/futuristic-spaceship-free-0eef1974fcf34c759223a4af77b8484a
+* author:	F2A (https://sketchfab.com/Fa_Sketch)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "futuristic spaceship (FREE)" (https://sketchfab.com/3d-models/futuristic-spaceship-free-0eef1974fcf34c759223a4af77b8484a) by F2A (https://sketchfab.com/Fa_Sketch) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

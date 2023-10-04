@@ -23,17 +23,27 @@
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <section class="navbar">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><a href="#kv_section">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#mechanic">Driving</a></li>
+        <li><a href="#localizations">Localizations</a></li>
+        <li><a href="#cars">Police</a></li>
+        <li><a href="#price_section">Buy</a></li>
       </ul>
     </section>
-    <section class="kv_section">
+    <section id="kv_section">
       <div class="kv">
         <img class="logo" src="../dist/img/logo.png" alt="kv" />
         <img
@@ -43,8 +53,12 @@
         />
       </div>
     </section>
-    <img class="divider" src="../dist/img/divider.png" alt="" />
-    <div class="about">
+    <img
+      class="divider"
+      src="../dist/img/divider.png"
+      alt="divining line separating two sections"
+    />
+    <section id="about">
       <!-- <img class="zoe" src="../dist/img/zoe.png" alt="" /> -->
       <div class="hero-container">
         <div class="environment"></div>
@@ -128,9 +142,13 @@
           </p>
         </div>
       </div>
-    </div>
-    <img class="divider" src="../dist/img/divider.png" alt="" />
-    <div class="mechanic">
+    </section>
+    <img
+      class="divider"
+      src="../dist/img/divider.png"
+      alt="divining line separating two sections"
+    />
+    <section id="mechanic">
       <div class="left">
         <img src="../dist/img/even_graph.gif" alt="" />
       </div>
@@ -154,9 +172,13 @@
         </div>
         <img class="right_img" src="../dist/img/hexagon.png" alt="" />
       </div>
-    </div>
-    <img class="divider" src="../dist/img/divider.png" alt="" />
-    <div class="localizations">
+    </section>
+    <img
+      class="divider"
+      src="../dist/img/divider.png"
+      alt="divining line separating two sections"
+    />
+    <div id="localizations">
       <h2>NEW LOCALIZATIONS</h2>
       <div class="gallery">
         <div class="gallery-container">
@@ -194,41 +216,80 @@
         <div class="gallery-controls"></div>
       </div>
     </div>
-    <img class="divider" src="../dist/img/divider.png" alt="" />
-    <div class="gallery_section"></div>
-    <div class="cars">
+    <img
+      class="divider"
+      src="../dist/img/divider.png"
+      alt="divining line separating two sections"
+    />
+    <div id="cars">
       <img src="../dist/img/corner_up.png" alt="" />
       <div class="carbox">
-        <h2>NEW CARS</h2>
+        <h2>New Lawkeepers of the Stars</h2>
         <div class="content">
           <div class="car_description">
             <div class="textbox">
-              <h3>Mustang Car (2077)</h3>
+              <h3>New Police Vehicle: Galactic Enforcer</h3>
               <p>
-                Introducing the "Mustang GT2077," a sleek, futuristic
-                reimagining of the classic muscle car. With its cutting-edge
-                fusion engine, adaptive suspension, and cyber-enhanced handling,
-                this vehicle delivers unparalleled speed and style. Customize
-                your Mustang with a range of body kits, paint jobs, and
-                performance upgrades to make it truly your own.
+                Embark on interstellar justice missions with the all-new
+                Galactic Enforcer. This state-of-the-art police spaceship is
+                equipped with advanced weaponry, shields, and AI-driven pursuit
+                systems. Patrol the cosmos and maintain order among the stars,
+                bringing law and order to the far reaches of the galaxy. The
+                Galactic Enforcer is the epitome of law enforcement in the
+                future, designed to keep both citizens and the universe safe.
+                Take control and let justice prevail across the celestial
+                frontier!
               </p>
             </div>
           </div>
-
           <div id="container3D"></div>
         </div>
       </div>
       <img src="../dist/img/corner_down.png" alt="" />
     </div>
-    <img class="divider" src="../dist/img/divider.png" alt="" />
-    <div class="price_section">
+    <img
+      class="divider"
+      src="../dist/img/divider.png"
+      alt="divining line separating two sections"
+    />
+    <div id="price_section">
       <img src="../dist/img/price_hexagon.png" alt="" />
       <div class="price_box">
         <p>169.99$</p>
         <button>AVAILABLE NOW</button>
       </div>
     </div>
-    <footer></footer>
+    <div id="end_section">
+      <div class="end_section__firstLine">
+        <p>Terms of Use and Privacy Policy<span>&#8592;</span></p>
+        <p>Career<span>&#8592;</span></p>
+        <p>User agreement<span>&#8592;</span></p>
+        <p>Fan Content Guidelines<span>&#8592;</span></p>
+      </div>
+      <div class="end_section__secondLine">
+        <p>Join the community</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="end_section__logo">
+        <img
+          loading="lazy"
+          src="https://www.cyberpunk.net/build/images/footer/nvidia-logo-b539df54.svg"
+          alt=""
+        />
+        <img
+          loading="lazy"
+          src="https://www.cyberpunk.net/build/images/footer/amd-logo-7ef008af.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <footer id="footer">
+      <div><h4></h4></div>
+    </footer>
     <script type="module" src="index.js"></script>
   </body>
 </html>
