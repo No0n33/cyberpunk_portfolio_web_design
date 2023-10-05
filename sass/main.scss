@@ -13,17 +13,29 @@ body {
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+  .black_razor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.6;
+  }
+  .divider {
+    padding: 2rem 0;
+    width: 85%;
+    align-items: center;
+    margin: auto;
+  }
   .navbar {
     color: #f8f150;
     z-index: 100;
     position: fixed;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
     ul {
       display: flex;
       list-style: none;
-      padding: 1rem 2rem;
+      padding: 0 2rem;
       justify-content: left;
+      background-color: rgba(0, 0, 0, 0.6);
       li,
       li::after {
         font-size: 0.92rem;
@@ -115,6 +127,12 @@ body {
         }
       }
     }
+    // .black_razor {
+    //   display: flex;
+    //   justify-content: center;
+    //   width: 100%;
+    //   opacity: 0.6;
+    // }
   }
   .kv {
     background-size: cover;
@@ -133,21 +151,10 @@ body {
       z-index: -1;
     }
   }
-  .divider {
-    padding: 2rem 0;
-    width: 85%;
-    align-items: center;
-    margin: auto;
-  }
   #about {
     text-align: center;
     padding: 2rem 0 1rem 0;
     background-color: rgba(0, 0, 0, 0.6);
-    // .zoe {
-    //   position: absolute;
-    //   height: 60rem;
-    //   left: 70%;
-    // }
     h2 {
       margin: 0;
       color: #f8f150;
@@ -156,21 +163,18 @@ body {
       }
     }
     .hero {
-      font-size: clamp(2em, 10vw, 5rem);
+      font-size: clamp(1rem, 5vw, 4rem);
       line-height: 1;
       display: inline-block;
       color: #fff;
       z-index: 2;
       letter-spacing: 1rem;
-
       /* Bright things in dark environments usually cast that light, giving off a glow */
       filter: drop-shadow(0 1px 3px);
     }
-
     .layers {
       position: relative;
     }
-
     .layers::before,
     .layers::after {
       content: attr(data-text);
@@ -178,23 +182,19 @@ body {
       width: 110%;
       z-index: -1;
     }
-
     .layers::before {
       top: 10px;
       left: 15px;
       color: #e0287d;
     }
-
     .layers::after {
       top: 5px;
       left: -10px;
       color: #1bc7fb;
     }
-
     .paths {
       animation: paths 5s step-end infinite;
     }
-
     @keyframes paths {
       0% {
         clip-path: polygon(
@@ -251,7 +251,6 @@ body {
           41% 1%
         );
       }
-
       5% {
         clip-path: polygon(
           0% 47%,
@@ -313,7 +312,6 @@ body {
           75% 82%
         );
       }
-
       30% {
         clip-path: polygon(
           0% 8%,
@@ -351,7 +349,6 @@ body {
           40% 67%
         );
       }
-
       45% {
         clip-path: polygon(
           0% 36%,
@@ -382,7 +379,6 @@ body {
           62% 11%
         );
       }
-
       76% {
         clip-path: polygon(
           0% 81%,
@@ -429,7 +425,6 @@ body {
           66% 24%
         );
       }
-
       90% {
         clip-path: polygon(
           0% 82%,
@@ -447,7 +442,6 @@ body {
           91% 72%
         );
       }
-
       1%,
       7%,
       33%,
@@ -457,69 +451,55 @@ body {
         clip-path: none;
       }
     }
-
     .movement {
       /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
       position: relative;
       animation: movement 8s step-end infinite;
     }
-
     @keyframes movement {
       0% {
         top: 0px;
-        left: -20px;
-      }
-
-      15% {
-        top: 10px;
-        left: 10px;
-      }
-
-      60% {
-        top: 5px;
         left: -10px;
       }
-
+      15% {
+        top: 10px;
+        left: 7px;
+      }
+      60% {
+        top: 5px;
+        left: -5px;
+      }
       75% {
         top: -5px;
-        left: 20px;
+        left: 10px;
       }
-
       100% {
         top: 10px;
         left: 5px;
       }
     }
-
     .opacity {
       animation: opacity 5s step-end infinite;
     }
-
     @keyframes opacity {
       0% {
         opacity: 0.1;
       }
-
       5% {
         opacity: 0.7;
       }
-
       30% {
         opacity: 0.4;
       }
-
       45% {
         opacity: 0.6;
       }
-
       76% {
         opacity: 0.4;
       }
-
       90% {
         opacity: 0.8;
       }
-
       1%,
       7%,
       33%,
@@ -529,63 +509,52 @@ body {
         opacity: 0;
       }
     }
-
     .font {
       animation: font 7s step-end infinite;
     }
-
     @keyframes font {
       0% {
         font-weight: 100;
         color: #e0287d;
         filter: blur(3px);
       }
-
       20% {
-        font-weight: 500;
+        font-weight: 300;
         color: #fff;
         filter: blur(0);
       }
-
       50% {
-        font-weight: 300;
+        font-weight: 400;
         color: #1bc7fb;
         filter: blur(2px);
       }
-
       60% {
-        font-weight: 700;
+        font-weight: 500;
         color: #fff;
         filter: blur(0);
       }
-
       90% {
-        font-weight: 500;
+        font-weight: 300;
         color: #e0287d;
         filter: blur(6px);
       }
     }
-
     .glitch span {
       animation: paths 5s step-end infinite;
     }
-
     .glitch::before {
       animation: paths 5s step-end infinite, opacity 5s step-end infinite,
         font 8s step-end infinite, movement 10s step-end infinite;
     }
-
     .glitch::after {
       animation: paths 5s step-end infinite, opacity 5s step-end infinite,
         font 7s step-end infinite, movement 8s step-end infinite;
     }
-
     .hero-container {
       // position: absolute;
       padding: 5rem 0;
       text-align: center;
     }
-
     .environment {
       // position: absolute;
       top: 0;
@@ -598,7 +567,6 @@ body {
         center no-repeat;
       background-size: cover;
     }
-    //
     .description {
       padding: 5rem;
       background: linear-gradient(
@@ -615,7 +583,8 @@ body {
     }
     .content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      word-wrap: break-word;
       justify-items: center;
       background: linear-gradient(
         221deg,
@@ -628,8 +597,7 @@ body {
       background-clip: text;
       -webkit-text-fill-color: transparent;
       .sumup {
-        width: 600px;
-        padding: 20px 0;
+        padding: 2rem 0;
         h3 {
           font-size: 30px;
           margin-bottom: 15px;
@@ -644,12 +612,14 @@ body {
   #mechanic {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
+    align-content: space-between;
     .left {
-      padding-left: 100px;
       background-image: url("../img/frame.png");
       background-repeat: no-repeat;
       background-size: cover;
       padding: 70px;
+      margin-right: 1rem;
       img {
         transform: scale(1.2);
       }
@@ -657,8 +627,7 @@ body {
     .right {
       position: relative;
       text-align: center;
-      margin-left: 200px;
-
+      margin-left: 1rem;
       .right_text {
         position: absolute;
         background: linear-gradient(
@@ -683,7 +652,7 @@ body {
   }
   #localizations {
     h2 {
-      font-size: 6rem;
+      font-size: 5rem;
       text-align: center;
       --neon-text-color: rgb(225, 0, 255);
       background: linear-gradient(
@@ -729,9 +698,9 @@ body {
       .gallery-container {
         align-items: center;
         display: flex;
-        height: 400px;
+        height: 40rem;
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 100rem;
         position: relative;
         .gallery-item {
           height: 200px;
@@ -863,18 +832,12 @@ body {
   }
   #cars {
     position: relative;
-
-    img[src$="corner_up.png"] {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 0 150px;
-    }
-    img[src$="corner_down.png"] {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin: 0 150px;
+    margin: 1rem 0;
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
     h2 {
       display: flex;
@@ -884,8 +847,8 @@ body {
       padding-bottom: 2rem;
       background: linear-gradient(
         221deg,
-        #f8f150 33.17%,
-        #eea359 51.4%,
+        #e21d74 33.17%,
+        #000000 51.4%,
         #e86765 64.04%,
         #e21d74 79.84%
       );
@@ -893,23 +856,25 @@ body {
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      .car_description {
-        margin-left: 22.9rem;
-        height: 16rem;
-        padding: 4rem;
-        text-align: center;
-        border-radius: 3%;
-        background-image: url("../img/card1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+    .carbox {
+      background-color: #fcee0a;
+      .hex {
+        position: absolute;
+        max-width: 20%;
+        height: 40%;
+        right: 0;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 5rem;
         .textbox {
+          padding: 0 10rem;
+          text-align: center;
           background: linear-gradient(
             221deg,
-            #f8f150 33.17%,
-            #eea359 51.4%,
+            #e21d74 33.17%,
+            #000000 51.4%,
             #e86765 64.04%,
             #e21d74 79.84%
           );
@@ -919,18 +884,17 @@ body {
           background-color: rgba(0, 0, 0, 0.6);
           h3 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
           }
         }
-      }
-      #container3D {
-        display: block;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        canvas {
-          width: 100%;
-          height: 100%;
+        #container3D {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          canvas {
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
       }
     }
@@ -1048,12 +1012,83 @@ body {
       }
     }
   }
-  #footer {
-    background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .yellow_razor {
     width: 100%;
-    height: 8rem;
+  }
+  #footer {
+    background-color: #fcee0a;
+    width: 100%;
+    height: 10rem;
+    padding: 2rem 0;
+    .end_section__firstLine {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      p {
+        padding: 0.6rem 2rem;
+      }
+    }
+    .end_section__secondLine {
+      display: flex;
+      justify-content: center;
+      p {
+        padding: 0.6rem 2rem;
+      }
+      i {
+        padding: 0.6rem 1rem;
+      }
+    }
+    .end_section__logo {
+      display: flex;
+      justify-content: center;
+      img {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    // #about {
+    //   .hero {
+    //     font-size: 2rem;
+    //   }
+    //   .content .sumup {
+    //     padding: 0 7rem;
+    //     h3 {
+    //       font-size: 1rem;
+    //     }
+    //     p {
+    //       font-size: 0.7rem;
+    //     }
+    //     // padding: 10rem;
+    //   }
+    // }
+    // #cars .carbox .content .textbox {
+    //   padding: 0;
+    // }
+    #mechanic {
+      .left {
+        padding: 70px;
+        img {
+          transform: scale(0.8);
+        }
+      }
+      .right {
+        .right_text {
+          h3 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 0.7rem;
+          }
+        }
+        img {
+          transform: scale(0.7);
+        }
+      }
+    }
   }
 }
 

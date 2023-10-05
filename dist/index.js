@@ -110,14 +110,6 @@ topLight.position.set(-1500, -1500, -1500); //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight1);
 
-//Instantiate a lodaer for the .gltf file
-// const loader = new GLTFLoader().setPath("3d_render/cyberpunk_car_gltf/");
-// loader.load("scene.gltf", (gltf) => {
-//   let object = gltf.scene;
-//   object.position.set(0, 0, 0);
-//   object.scale.set(0.85, 0.85, 0.85);
-//   scene.add(object);
-// });
 //spaceship
 const loader = new GLTFLoader().setPath("3d_render/spaceship/");
 loader.load("scene.gltf", (gltf) => {
@@ -126,7 +118,6 @@ loader.load("scene.gltf", (gltf) => {
   object.scale.set(18.85, 18.85, 18.85);
   scene.add(object);
 });
-
 //ground
 // const planeGeometry = new THREE.CircleGeometry(220, 32);
 // const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
