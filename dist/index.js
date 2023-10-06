@@ -118,13 +118,6 @@ loader.load("scene.gltf", (gltf) => {
   object.scale.set(18.85, 18.85, 18.85);
   scene.add(object);
 });
-//ground
-// const planeGeometry = new THREE.CircleGeometry(220, 32);
-// const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-// const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-// plane.rotation.x = -Math.PI / 2;
-// plane.position.y = 0;
-// scene.add(plane);
 
 //render the scene
 function animate() {

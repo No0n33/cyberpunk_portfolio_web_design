@@ -13,16 +13,6 @@ body {
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: cover; }
-  body .black_razor {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    opacity: 0.6; }
-  body .divider {
-    padding: 2rem 0;
-    width: 85%;
-    align-items: center;
-    margin: auto; }
   body .navbar {
     color: #f8f150;
     z-index: 100;
@@ -30,6 +20,7 @@ body {
     width: 100%; }
     body .navbar ul {
       display: flex;
+      flex-wrap: wrap;
       list-style: none;
       padding: 0 2rem;
       justify-content: left;
@@ -102,6 +93,16 @@ body {
   100% {
     clip-path: var(--slice-1);
     transform: translate(0); } }
+  body .black_razor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 0.6; }
+  body .divider {
+    padding: 2rem 0;
+    width: 85%;
+    align-items: center;
+    margin: auto; }
   body .kv {
     background-size: cover;
     display: flex;
@@ -131,7 +132,6 @@ body {
       display: inline-block;
       color: #fff;
       z-index: 2;
-      letter-spacing: 1rem;
       /* Bright things in dark environments usually cast that light, giving off a glow */
       filter: drop-shadow(0 1px 3px); }
     body #about .layers {
@@ -140,15 +140,13 @@ body {
     body #about .layers::after {
       content: attr(data-text);
       position: absolute;
-      width: 110%;
+      width: 100%;
       z-index: -1; }
     body #about .layers::before {
       top: 10px;
-      left: 15px;
       color: #e0287d; }
     body #about .layers::after {
       top: 5px;
-      left: -10px;
       color: #1bc7fb; }
     body #about .paths {
       animation: paths 5s step-end infinite; }
@@ -278,7 +276,7 @@ body {
       body #about .content .sumup {
         padding: 2rem 0; }
         body #about .content .sumup h3 {
-          font-size: 30px;
+          font-size: 2rem;
           margin-bottom: 15px; }
         body #about .content .sumup img {
           width: 100px;
@@ -286,7 +284,7 @@ body {
   body #mechanic {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin: 3rem 0;
     align-content: space-between; }
     body #mechanic .left {
       background-image: url("../img/frame.png");
@@ -477,13 +475,16 @@ body {
       background-color: #fcee0a; }
       body #cars .carbox .hex {
         position: absolute;
-        max-width: 20%;
+        width: 20%;
         height: 40%;
-        right: 0; }
+        right: 0;
+        z-index: 1; }
       body #cars .carbox .content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 0 5rem; }
+        margin: 0 5rem;
+        position: relative;
+        z-index: 2; }
         body #cars .carbox .content .textbox {
           padding: 0 10rem;
           text-align: center;
@@ -510,11 +511,12 @@ body {
     position: relative;
     margin: 0 0 5rem 0; }
     body #price_section img {
-      z-index: 0; }
+      z-index: 0;
+      max-width: 100%;
+      max-height: 100%; }
     body #price_section .price_box {
       position: absolute;
       z-index: 1;
-      height: 15em;
       text-align: center; }
       body #price_section .price_box p {
         font-size: 6rem;
@@ -593,7 +595,7 @@ body {
   body #footer {
     background-color: #fcee0a;
     width: 100%;
-    height: 10rem;
+    height: auto;
     padding: 2rem 0; }
     body #footer .end_section__firstLine {
       display: flex;
@@ -615,13 +617,101 @@ body {
         padding: 0 1rem; }
 
 @media (max-width: 1280px) {
+  body #about .hero {
+    font-size: 3rem; }
+  body #localizations h2 {
+    font-size: 3rem; }
+  body #localizations .gallery .gallery-container {
+    height: 20rem; }
+  body #cars h2 {
+    font-size: 3rem; }
+  body #cars .carbox .content {
+    grid-template-columns: 1fr; }
+    body #cars .carbox .content .textbox {
+      padding: 0; }
+  body #cars .carbox .hex {
+    width: 20%;
+    height: 20%; }
   body #mechanic .left {
-    padding: 70px; }
+    padding: 0; }
     body #mechanic .left img {
       transform: scale(0.8); }
-  body #mechanic .right .right_text h3 {
-    font-size: 1.5rem; }
-  body #mechanic .right .right_text p {
-    font-size: 0.7rem; }
+  body #mechanic .right .right_text {
+    z-index: 1; }
+    body #mechanic .right .right_text h3 {
+      font-size: 1.5rem; }
+    body #mechanic .right .right_text p {
+      font-size: 0.9rem; }
   body #mechanic .right img {
-    transform: scale(0.7); } }
+    padding: 0; } }
+
+@media (max-width: 768px) {
+  body #about .hero-container {
+    padding: 0; }
+  body #mechanic {
+    flex-direction: column-reverse; }
+    body #mechanic .left {
+      height: auto;
+      margin: 0; }
+      body #mechanic .left img {
+        transform: scale(0.9); }
+      body #mechanic .left .right {
+        margin: 0; }
+        body #mechanic .left .right img {
+          height: 15rem; }
+  body #cars .carbox .hex {
+    width: 20%;
+    height: 20%; }
+  body #localizations .gallery .gallery-container .gallery-item-1 {
+    transform: translateX(-25%); }
+  body #localizations .gallery .gallery-container .gallery-item-2 {
+    transform: translateX(-40%); }
+  body #localizations .gallery .gallery-container .gallery-item-3 {
+    transform: translateX(-50%); }
+  body #localizations .gallery .gallery-container .gallery-item-4 {
+    transform: translateX(-60%); }
+  body #localizations .gallery .gallery-container .gallery-item-5 {
+    transform: translateX(-75%); }
+  body #footer .end_section__firstLine {
+    flex-direction: column; } }
+
+@media (max-width: 568px) {
+  body .navbar ul li,
+  body .navbar ul li::after {
+    padding: 0; }
+  body #about .hero {
+    font-size: 2rem; }
+  body #about .content {
+    grid-template-columns: repeat(1, 1fr); }
+    body #about .content .sumup h3 {
+      font-size: 1.5rem; }
+    body #about .content .sumup p {
+      font-size: 0.8rem; }
+  body #cars h2 {
+    font-size: 2rem; }
+  body #cars .content .textbox h3 {
+    font-size: 1.5rem; }
+  body #cars .content .textbox p {
+    font-size: 0.8rem; }
+  body #cars .hex {
+    max-width: 100%; }
+  body #localizations .gallery .gallery-container .gallery-item-1 {
+    transform: translateX(-15%);
+    width: 260px;
+    height: 130px; }
+  body #localizations .gallery .gallery-container .gallery-item-2 {
+    transform: translateX(-35%);
+    width: 310px;
+    height: 180px; }
+  body #localizations .gallery .gallery-container .gallery-item-3 {
+    transform: translateX(-50%);
+    width: 330px;
+    height: 200px; }
+  body #localizations .gallery .gallery-container .gallery-item-4 {
+    transform: translateX(-65%);
+    width: 310px;
+    height: 180px; }
+  body #localizations .gallery .gallery-container .gallery-item-5 {
+    transform: translateX(-85%);
+    width: 260px;
+    height: 130px; } }
