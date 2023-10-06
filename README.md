@@ -6,7 +6,7 @@ The cyberpunk-themed website project is a visual manifestation of inspiration dr
 ## Technologies Used in the Project
 - **HTML**: Markup language used for structuring and presenting content on the website.
 - **CSS and SASS**: Styling languages used to give the website a cyberpunk aesthetic, including colors, fonts, animations, and layout.
-- **JavaScript**: Used for website interactivity and implementing various functionalities.
+- **JavaScript**: Used for website interactivity and implementing various functionalities. In this case the carousel component was created with Javascript.
 - **Three.js**: A JavaScript library used to create interactive animations and 3D visualizations.
 
 ## Project Graphics
