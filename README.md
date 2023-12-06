@@ -20,4 +20,5 @@ The website is designed with Responsive Web Design principles, ensuring a seamle
 
 ## Project Purpose
 The purpose of this project is to showcase skills in front-end web design, particularly within the cyberpunk aesthetic. The project serves as a portfolio where the author can demonstrate their abilities and creativity.
+[SCREENSHOT] - for more animation check whole code
 ![Cyberpunk2077](visualization.png)
